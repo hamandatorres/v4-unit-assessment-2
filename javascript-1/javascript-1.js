@@ -10,6 +10,7 @@
 
 //CODE HERE
 
+const myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
 
 ////////////////////PROBLEM 2////////////////////
 /*
@@ -21,6 +22,7 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
+let foundZ = nestedLetters[5][2][1]
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -37,15 +39,15 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
-
+const animals = [...forest, ...ocean, ...savannah, ...desert]
 /*
     Now use the spread operator to make a copy of your animals array.
     Call the new array 'animalsCopy' and add 'elephant' onto the end of the array.
 */
 
 //CODE HERE
-
+const animalsCopy = [...animals ]
+animalsCopy.push('elephant');
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -56,8 +58,15 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
-  
+let compareNums = (num1, num2) => { 
+    if (num1 > num2) {
+      return num1; }
+      else if (num2 > num1) {
+        return num2 }
+        else {
+          return num1, num2;
+        }
+      }
 ////////////////////PROBLEM 5////////////////////
 /*
     Write a one line arrow function called 'bestMovie' that takes in one parameter,
@@ -68,7 +77,10 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+let bestMovie = movie => 
+`${movie} is the best movie ever!`
+bestMovie('Sharknado')
+
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -77,6 +89,9 @@ const desert = ['rattlesnake', 'coyote']
 
 //CODE HERE
   
+let jsNinja = () => 'I am a Javascript ninja!'
+console.log(jsNinja())
+
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -98,7 +113,7 @@ const desert = ['rattlesnake', 'coyote']
 
 //CODE HERE
   
-
+delete gameInfo.rating
 ////////////////////PROBLEM 8////////////////////
 
 //DO NOT EDIT CODE BELOW
@@ -120,7 +135,13 @@ const desert = ['rattlesnake', 'coyote']
 
 //CODE HERE
   
-  
+shapes.forEach = (element, index, array) => {
+    if (element % 2 === 1) {
+  delete element
+  } else {
+    return element
+  }
+
 ////////////////////PROBLEM 9////////////////////
 
 //DO NOT EDIT CODE BELOW
@@ -161,7 +182,16 @@ const classes = [
 */
 
 //CODE HERE
-
+classes.forEach(function(element, i, array) {
+    for (let i = 0; i < array.length; i++) {
+      for (let key in classes) {
+        if (key == true) {
+        
+        }
+      } 
+    }
+  })
+  console.log(classes)
   
 ////////////////////PROBLEM 10////////////////////
 /*
