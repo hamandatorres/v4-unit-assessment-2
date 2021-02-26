@@ -36,6 +36,10 @@ let foods = [
 */
 
 //CODE HERE
+foods[0].calories = ((foods[0].carbs + foods[0].protein * 4) + (foods[0].fat * 9))
+foods[1].calories = ((foods[1].carbs + foods[1].protein * 4) + (foods[1].fat * 9))
+foods[2].calories = ((foods[2].carbs + foods[2].protein * 4) + (foods[2].fat * 9))
+console.log(foods)
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -81,6 +85,12 @@ const products = [
 */
 
 //CODE HERE
+const saleProducts = products.map(function(element, index, array) {
+  for(let key in products) {
+  return ((products[index].price) - (products[index].price * .25))
+  }
+})
+console.log(saleProducts)
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -91,6 +101,12 @@ const products = [
 */
 
 //CODE HERE
+const blueProducts = products.filter(function(element, index, array) {
+  if (array.includes('blue')) {
+    return array
+    }  
+})
+console.log(blueProducts)
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -130,6 +146,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+const helensInfo = Object.assign(contactInfo, shippingInfo)
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -139,6 +156,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+const ellensInfo = {...helensInfo, name: 'Ellen', email: 'ellen@gmail.com'}
 
 ////////////////////PROBLEM 7////////////////////
 /* 
@@ -146,6 +164,9 @@ const shippingInfo = {
 */
 
 //CODE HERE
+const {email} = ellensInfo
+console.log(email)
+
 
 ////////////////////PROBLEM 8////////////////////
 /*
